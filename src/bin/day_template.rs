@@ -2,7 +2,10 @@ use std::env;
 use std::time::Instant;
 use Rust_AoC_2023::helpers::file_io::file_io;
 
-fn run<T>(input: &str, _: T) -> Result<String, String> {
+fn run<T>(input: &str, _: T) -> Result<String, String>
+where
+    T: Iterator<Item = String>,
+{
     return Ok(String::from(input));
 }
 pub fn main() {
